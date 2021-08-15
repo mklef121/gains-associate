@@ -1,12 +1,7 @@
+import { IDataProcessResult } from "../core/interfaces-types";
 
-interface IDataProcessResult {
-    regionsArray: Record<string, any>[],
-    instanceTypeArray: Record<string, any>[],
-    pricesArray: Record<string, any>[],
-    instanceArray: Record<string, any>[],
-}
+
 onmessage = async function (_e: MessageEvent<any>) {
-    console.log('Posting message back to main script');
     let result: null | IDataProcessResult
     result = getDatabaseData(await getFileStreamAndProcess());
 

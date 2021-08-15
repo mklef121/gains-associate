@@ -1,22 +1,25 @@
 import { useEffect, useState } from "react";
-import { initJsStore, TAvailableDatabases } from "../db/database";
+import { initJsStore } from "../db/database";
+import { populateDatabase } from "../services/db-data.service";
 
 
-export const useStartDb = (database: TAvailableDatabases) => {
+export const useStartDb = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const [isNew, setIsNew] = useState<boolean>(false);
     const [isInitialized, setIsInitialized] = useState<boolean>(false);
     const [isIndexedDbSupported, setIsIndexedDbSupported] = useState<boolean>(true);
     useEffect(() => {
         const startStore = async () => {
+          setIsLoading(true)
           try {
-            const isDbCreated = await initJsStore(database);
+            const isDbCreated = await initJsStore("awsPicing");
             if (isDbCreated) {
                 setIsNew(true)
-              console.log("db created");
               // prefill database
+              await populateDatabase()
+              
             } else {
                 setIsNew(false)
-              console.log("db opened");
             }
 
             setIsIndexedDbSupported(true);
@@ -25,10 +28,12 @@ export const useStartDb = (database: TAvailableDatabases) => {
             console.error(ex);
             setIsIndexedDbSupported(false)
           }
+
+          setIsLoading(false)
         }
 
         startStore()
-      }, [database]);
+      }, []);
 
-    return {isNew, isIndexedDbSupported, isInitialized}
+    return {isNew, isIndexedDbSupported, isInitialized, isLoading}
 } 

@@ -11,6 +11,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "chart.js": "^3.5.0",
     "jsstore": "^4.3.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

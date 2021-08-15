@@ -4,21 +4,19 @@ import { instanceType } from './tables/instance-type.table';
 import { instances } from './tables/instances.table';
 import { pricingRegion } from './tables/pricing-region.table';
 import { pricings } from './tables/pricing.table';
-import { products } from './tables/products.table';
-import { students } from './tables/users.table';
 
-export type TAvailableDatabases = "school";
 const schoolDataBase: IDataBase = {
-    name: "school",
+    name: "awsPicing",
     version: 1,
-    tables: [students, products, instanceType, instances, pricingRegion, pricings]
+    tables: [instanceType, instances, pricingRegion, pricings]
 };
 
-// {[key in TAvailableDatabases]: IDataBase}
-
+//Incase I have multiple databases, this map helps me hold them together
 const databases = {
-    school: schoolDataBase
+    awsPicing: schoolDataBase
 }
+
+export type TAvailableDatabases = keyof (typeof databases)
 
 export const initJsStore = async (database: TAvailableDatabases) => {
     return await connection.initDb(databases[database]);

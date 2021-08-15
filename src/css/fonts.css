@@ -1,0 +1,107 @@
+/* Helvetica Neue */
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('./fonts/helvetica-neue-ultra-light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./fonts/helvetica-light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/helvetica-regular-ttf.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./fonts/helvetica-neue-medium-extended-ttf.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/helvetica-bold.ttf') format('truetype');
+}
+
+/* BRFirma */
+
+@font-face {
+    font-family: 'BRFirma';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('./fonts/br-firma/BRFirma-Thin.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'BRFirma';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('./fonts/br-firma/BRFirma-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'BRFirma';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./fonts/br-firma/BRFirma-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'BRFirma';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/br-firma/BRFirma-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'BRFirma';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./fonts/br-firma/BRFirma-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'BRFirma';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('./fonts/br-firma/BRFirma-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'BRFirma';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/br-firma/BRFirma-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'BRFirma';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('./fonts/br-firma/BRFirma-Black.woff') format('woff');
+}
+
